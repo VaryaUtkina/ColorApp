@@ -8,6 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    
     // MARK: - IB Outlets
     @IBOutlet var coloredView: UIView!
     
@@ -22,39 +23,39 @@ final class ViewController: UIViewController {
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setColor()
+        
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
     }
-    
-    // MARK: - Override Methods
     
     // MARK: - IB Actions
-    
-    @IBAction func redSliderAction() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        setupUI()
-    }
-    
-    @IBAction func greenSliderAction() {
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        setupUI()
-    }
-    @IBAction func blueSliderAction() {
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        setupUI()
+    @IBAction func sliderAction(_ sender: UISlider) {
+        setColor()
+        
+        switch sender {
+        case redSlider:
+            redLabel.text = string(from: redSlider)
+        case greenSlider:
+            greenLabel.text = string(from: greenSlider)
+        default:
+            blueLabel.text = string(from: blueSlider)
+        }
     }
     
     // MARK: - Private Methods
-    private func setupUI() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        
+    private func setColor() {
         coloredView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+    }
+    
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
