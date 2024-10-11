@@ -14,7 +14,7 @@
 		48C37A3F2CB56FD3002C1E09 /* Exceptions for "ColorApp" folder in "ColorApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 48C37A2C2CB56FD0002C1E09 /* ColorApp */;
 		};
@@ -146,7 +146,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorApp/Info.plist;
+				INFOPLIST_FILE = ColorApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Color App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -178,7 +178,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorApp/Info.plist;
+				INFOPLIST_FILE = ColorApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Color App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

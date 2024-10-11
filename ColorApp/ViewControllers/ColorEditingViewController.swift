@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ColorEditingViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var coloredView: UIView!
@@ -42,6 +42,9 @@ final class ViewController: UIViewController {
         default:
             blueLabel.text = string(from: blueSlider)
         }
+    }
+    
+    @IBAction func doneButtonTapped() {
     }
     
     // MARK: - Private Methods
