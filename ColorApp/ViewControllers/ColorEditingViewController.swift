@@ -20,9 +20,22 @@ final class ColorEditingViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var color: UIColor!
+    weak var delegate: ColorEditingViewControllerDelegate?
+    
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        coloredView.backgroundColor = color
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        coloredView.backgroundColor?.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        redSlider.value = Float(red)
+        greenSlider.value = Float(green)
+        blueSlider.value = Float(blue)
+        
         setColor()
         
         redLabel.text = string(from: redSlider)
@@ -45,6 +58,15 @@ final class ColorEditingViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped() {
+        delegate?.setupColor(
+            with: UIColor(
+                red: CGFloat(redSlider.value),
+                green: CGFloat(greenSlider.value),
+                blue: CGFloat(blueSlider.value),
+                alpha: 1
+            )
+        )
+        dismiss(animated: true)
     }
     
     // MARK: - Private Methods

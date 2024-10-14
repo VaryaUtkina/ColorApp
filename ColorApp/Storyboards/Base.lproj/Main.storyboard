@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1055.7251908396945" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="2qR-Kb-fgX">
             <objects>
-                <viewController id="zR7-7Z-Cm4" sceneMemberID="viewController">
+                <viewController id="zR7-7Z-Cm4" customClass="StartScreenViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRL-t2-s7P">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
