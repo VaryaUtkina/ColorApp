@@ -20,6 +20,10 @@ final class ColorEditingViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
     var color: UIColor!
     weak var delegate: ColorEditingViewControllerDelegate?
     
